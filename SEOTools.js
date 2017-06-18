@@ -28,9 +28,9 @@ function ILinks(uri) {
   return inner_links.length; 
 }
 
-function getInnerlinks(geturi,getbase_uri) { 
+function getInnerlinks(get_uri,getbase_uri) { 
   try  {
-    var html = getContents(geturi);
+    var html = getContents(get_uri);
     if (html.indexOf('</head>') !== -1 ) {
         html = html.split('</head>')[1];    
         if (html.indexOf('</body>') !== -1 ) { 
@@ -65,9 +65,9 @@ function ELinks(uri) {
       return external_links.length;
  return 0;       
 }
-function getExternalLinks(geturi,getbase_uri) { 
+function getExternalLinks(get_uri,getbase_uri) { 
   try  {
-    var html = getContents(geturi);
+    var html = getContents(get_uri);
     if (html.indexOf('</head>') !== -1 ) {
         html = html.split('</head>')[1];    
         if (html.indexOf('</body>') !== -1 ) { 
